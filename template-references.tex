@@ -1,0 +1,81 @@
+% !TEX TS-program = xelatex
+
+% Use a font size of 12 point, black type. Maximum of six lines per inch. No condensed/narrow fonts, type, or spacing.
+\documentclass[12pt]{article}
+
+%\linespread{0.901} % six lines per inch
+
+%\usepackage{times}
+\usepackage{mathptmx}
+
+
+
+\usepackage{atbegshi}
+
+
+% Insert a margin of 2 cm (3/4 inch) - minimum - around the page.
+\usepackage[normalem]{ulem}
+\renewcommand{\ULthickness}{0.75pt}
+
+\usepackage[labelfont=bf]{caption}
+ 
+\usepackage{tabularx}
+\usepackage{makecell}
+
+\usepackage[margin=2cm]{geometry}
+
+\usepackage{url}
+\urlstyle{same}
+
+
+% Indicate your name, the project title and the section title (e.g., Summary of Research Proposal) at the top of each page. Indicate the page number clearly at the bottom of each page. For CV attachments, only your name (i.e., does not have to be nominated principal applicant name) and the section title (e.g., Patents and Intellectual Property Rights) are required in the header.
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+% display section title in header
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\subsectionmark}[1]{}% Remove \subsection from header
+\fancyhf{}
+
+\renewcommand{\headrulewidth}{0.pt}
+%\textheight=10in % 11in minus 2*0.5in
+
+%\lhead{\small \rightmark}
+\lhead{\small Research Proposal}
+\chead{\small Project Title}
+\rhead{\small Investigator Name}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+
+
+
+\usepackage[numbers,sort&compress,super]{natbib}
+\makeatletter
+\renewcommand{\@biblabel}[1]{#1.}
+\makeatother
+
+
+
+
+
+\usepackage[small,compact,explicit]{titlesec}
+\titleformat{\section} {\vspace{6pt}\bf\uppercase}{\thesection} {12pt} {#1\vspace{0pt}}
+\titleformat{\subsection} {\vspace{0pt}\bf}{\thesubsection} {12pt} {\uline{#1}\vspace{-4pt}}
+\titleformat{\subsubsection}[runin]{\vspace{2pt}\bf}{\thesubsubsection} {6pt} {#1}
+
+
+\begin{document}
+
+
+\section * {REFERENCES}
+\lhead{\small Project References}
+\setlength{\bibsep}{0pt plus 0.3ex}
+
+\bibliographystyle{naturemag}
+\input{template.bbl}  % generated when template.tex is compiled
+
+\end{document}
+
+
