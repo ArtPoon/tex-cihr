@@ -3,7 +3,15 @@
 % Use a font size of 12 point, black type. Maximum of six lines per inch. No condensed/narrow fonts, type, or spacing.
 \documentclass[12pt]{article}
 
-%\linespread{0.901} % six lines per inch
+% set margins to CIHR standard
+\usepackage[margin=2cm]{geometry}
+
+% Uncomment this line to get six lines per inch
+% \linespread{0.901} 
+% See https://tex.stackexchange.com/questions/23824/6-lines-in-one-inch
+% Note, I prefer to use the LaTeX default (fewer lines per inch) 
+%  because it is easier to read!
+
 
 \usepackage{lipsum}
 
@@ -14,24 +22,25 @@
 %\setallmainfonts(Digits,Latin)[Ligatures=TeX]{Arial}
 
 
+% used to compile references into a separate PDF
 \usepackage{atbegshi}
+
 
 % Insert a margin of 2 cm (3/4 inch) - minimum - around the page.
 \usepackage[normalem]{ulem}
 \renewcommand{\ULthickness}{0.75pt}
 
+% for rendering Figure and Table labels in bold typeface
 \usepackage[labelfont=bf]{caption}
 
-\usepackage{tabularx}
-\usepackage{makecell}
-
-\usepackage[margin=2cm]{geometry}
 
 \usepackage{url}
 \urlstyle{same}
 
 
-% Indicate your name, the project title and the section title (e.g., Summary of Research Proposal) at the top of each page. Indicate the page number clearly at the bottom of each page. For CV attachments, only your name (i.e., does not have to be nominated principal applicant name) and the section title (e.g., Patents and Intellectual Property Rights) are required in the header.
+%% From CIHR document:
+% Indicate your name, the project title and the section title (e.g., Summary of Research Proposal) at the top of each page. 
+% Indicate the page number clearly at the bottom of each page. For CV attachments, only your name (i.e., does not have to be nominated principal applicant name) and the section title (e.g., Patents and Intellectual Property Rights) are required in the header.
 \usepackage{fancyhdr}
 
 \pagestyle{fancy}
@@ -42,7 +51,6 @@
 
 \renewcommand{\headrulewidth}{0.pt}
 %\textheight=10in % 11in minus 2*0.5in
-
 
 \lhead{\small Research Proposal}
 \chead{\small Project Title}
@@ -89,12 +97,14 @@
 % see http://compusavvy.wordpress.com/2010/08/01/understanding-line-and-paragraph-spacing-in-word/
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% From CIHR:
+
 % Provide a clear, concise description of your research proposal, using the adjudication criteria outlined below. The research proposal should be attached as a PDF document, with a maximum of 10 pages (including figures and tables).
 
 % The research proposal should stand alone (i.e. it should contain all the information required to support your research plan and should contain a complete description of your project).
 
 % The research proposal may be comprised of text, tables, charts, figures and photographs, as required, and must adhere to the guidelines for attachments on the Acceptable Application Formats and Attachments.
-
 
 
 
